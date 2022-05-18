@@ -3,6 +3,8 @@
     // include __DIR__ '/cvresume/includes/header.php';
 ?>
 
-<h1>This is homepage</h1>
+<main>
+    <?php include(dirname(__FILE__)."/view/home.php"); ?>
+</main>
 
 <?php include(dirname(__FILE__)."/includes/footer.php"); ?>

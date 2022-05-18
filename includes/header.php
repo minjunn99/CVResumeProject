@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Blog Project</title>
     <!-- Link Google Font -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
 
     <!-- Link Bootstrap Css -->
     <link rel="stylesheet" href="/cvresume/assets/css/vendor/bootstrap.min.css">
+
+    <!-- Link bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
     <!-- Link Custom Css -->
     <link rel="stylesheet" type="text/css" href="/cvresume/assets/css/styles.css" />
@@ -18,26 +23,29 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Blog</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/blog/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog/page/addPost.php">Add Post</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
-            </ul>
+            <div class="container">
+                <a class="navbar-brand text-uppercase fs-3" href="/cvresume/">arnold</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse py-3" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link active" aria-current="page" href="/cvresume/">home</a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" aria-current="page" href="/cvresume/view/about.php">about</a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="/cvresume/view/projects.php">projects</a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="/cvresume/view/contact.php">contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
         </nav>
     </header>
