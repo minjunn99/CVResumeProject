@@ -1,5 +1,8 @@
-<?php include("/blog/includes/header.php") ?>
+<?php
+    include(dirname(__FILE__)."/includes/header.php");
+    // include __DIR__ '/cvresume/includes/header.php';
+?>
 
 <h1>This is homepage</h1>
 
-<?php include("/blog/includes/footer.php") ?>
+<?php include(dirname(__FILE__)."/includes/footer.php"); ?>
