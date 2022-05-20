@@ -3,6 +3,12 @@ body {
   font-size: 1.25rem;
 }
 
+/* Fixed css bootstrap */
+.form-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
 /* general */
 .flow > * + * {
   margin-top: var(--flow-spacer, 1rem);
@@ -90,7 +96,7 @@ section .heading {
 .hero-description {
   display: grid;
   place-items: center;
-  padding: 1.25rem 1rem;
+  padding: 5rem 1rem;
   width: 100%;
   max-width: 64rem;
 }
@@ -201,6 +207,13 @@ section .heading {
   .project-grid > *:nth-child(odd) {
     flex-direction: row-reverse;
   }
+}
+
+/* Contact page css */
+.contact-form {
+  width: 100%;
+  max-width: 32rem;
+  padding-block: 3rem;
 }
 
 /* Footer css */
