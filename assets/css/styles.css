@@ -177,6 +177,32 @@ section .heading {
   max-width: 25rem;
 }
 
+/* Project page css */
+.project-grid {
+  gap: 3rem;
+}
+
+.project-id {
+  font-size: 2.75rem;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (min-width: 64em) {
+  .project-id {
+    font-size: 5.375rem;
+  }
+
+  .project-grid > *:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
 /* Footer css */
 .footer {
   padding-block: 1.875rem;

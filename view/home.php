@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero py-0">
     <div class="hero-content text-white">
         <h3 class="hero-heading text-center text-uppercase">arnold davidson</h3>
         <p class="fs-3 text-capitalize">architect & spatial planner</p>
