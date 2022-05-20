@@ -4,14 +4,31 @@ body {
 }
 
 /* general */
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
+section {
+  padding-block: 3.75rem;
+}
+
 section .heading {
   font-size: 2rem;
 }
 
 @media only screen and (min-width: 64em) {
+  section {
+    padding-block: 4rem;
+  }
+
   section .heading {
     font-size: 3rem;
   }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: unset;
 }
 
 /* Header css */
@@ -54,12 +71,12 @@ section .heading {
   }
 }
 
-/* Home css */
+/* Home page css */
 /* hero css */
 .hero-content {
   display: grid;
   place-items: center;
-  padding: 7.5rem 1rem;
+  padding: 3.75rem 1rem;
   background: url("../img/hero-bg.webp") no-repeat;
   background-size: cover;
 }
@@ -73,7 +90,7 @@ section .heading {
 .hero-description {
   display: grid;
   place-items: center;
-  padding: 5rem 1rem;
+  padding: 1.25rem 1rem;
   width: 100%;
   max-width: 64rem;
 }
@@ -85,7 +102,7 @@ section .heading {
 @media only screen and (min-width: 64em) {
   .hero-content {
     padding-inline: 0;
-    padding-block: 17.5rem;
+    padding-block: 13.5rem;
   }
 
   .hero-heading {
@@ -94,7 +111,7 @@ section .heading {
 
   .hero-description {
     padding-inline: 0;
-    padding-block: 10rem;
+    padding-block: 6rem;
   }
 
   .hero-description p {
@@ -103,22 +120,61 @@ section .heading {
 }
 
 /* work css */
-.work-container {
-  padding-block: 3.75rem;
-}
-
 .work-content {
   padding-block: 2.5rem;
 }
 
 @media only screen and (min-width: 64em) {
-  .work-container {
-    padding-block: 4rem;
-  }
-
   .work-content {
     padding-block: 5rem;
   }
+}
+
+/* About page css */
+/* education */
+.education-item {
+  --flow-spacer: 1.25rem;
+  padding-block: 2rem;
+}
+
+.education-major {
+  font-size: 1.75rem;
+}
+
+@media only screen and (min-width: 64em) {
+  .education-major {
+    font-size: 2rem;
+  }
+}
+
+/* employment */
+.employment-item {
+  padding-block: 2rem;
+}
+
+.employment-content {
+  --flow-spacer: 1.25rem;
+}
+
+.employment-pos {
+  font-size: 1.75rem;
+}
+
+@media only screen and (min-width: 64em) {
+  .employment-item {
+    gap: 0;
+  }
+
+  .employment-pos {
+    font-size: 2rem;
+  }
+}
+
+/* testimonial */
+.testimonial-content {
+  --flow-spacer: 2rem;
+  width: 80%;
+  max-width: 25rem;
 }
 
 /* Footer css */
@@ -129,6 +185,15 @@ section .heading {
 .footer-social {
   gap: 1rem;
   padding-block: 1rem;
+}
+
+.footer-social > * {
+  cursor: pointer;
+  transition: opacity 350ms ease;
+}
+
+.footer-social > *:hover {
+  opacity: 0.9;
 }
 
 @media only screen and (min-width: 64em) {
