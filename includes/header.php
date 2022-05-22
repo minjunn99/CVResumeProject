@@ -33,16 +33,13 @@
                 <div class="collapse navbar-collapse py-3" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item text-uppercase">
-                            <a class="nav-link active" aria-current="page" href="/cvresume/">home</a>
+                            <a class="nav-link fw-bold" aria-current="page" href="/cvresume/index.php?controller=about">about</a>
                         </li>
                         <li class="nav-item text-uppercase">
-                            <a class="nav-link" aria-current="page" href="/cvresume/view/about.php">about</a>
+                            <a class="nav-link fw-bold" href="/cvresume/index.php?controller=project">projects</a>
                         </li>
                         <li class="nav-item text-uppercase">
-                            <a class="nav-link" href="/cvresume/view/projects.php">projects</a>
-                        </li>
-                        <li class="nav-item text-uppercase">
-                            <a class="nav-link" href="/cvresume/view/contact.php">contact</a>
+                            <a class="nav-link fw-bold" href="/cvresume/index.php?controller=contact">contact</a>
                         </li>
                     </ul>
                 </div>
