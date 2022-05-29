@@ -2,6 +2,6 @@
 
 class HomeController extends BaseController {
     public function index() {
-        $this->view('homes.index');
+        $this->view('frontend.homes.index');
     }
 }

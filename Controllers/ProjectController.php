@@ -2,6 +2,6 @@
 
 class ProjectController extends BaseController {
     public function index() {
-        $this->view('projects.index');
+        $this->view('frontend.projects.index');
     }
 }

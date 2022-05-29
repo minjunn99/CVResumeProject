@@ -19,7 +19,7 @@ class BaseController {
     }
 
     protected function load_model($model_path) {
-        $viewPath = self::MODEL_FOLDER_NAME. '/' . $modelPath. '.php';
+        $viewPath = self::MODEL_FOLDER_NAME. '/' . $model_path. '.php';
         require($viewPath);
     }
 }
