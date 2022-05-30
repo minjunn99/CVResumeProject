@@ -44,15 +44,22 @@ class BaseModel extends Database {
     /**
 	 * Them du lieu vao bang
 	 */
-	public function add($table, $select = [], $data = []) {
+	public function add($table, $data = []) {
         $columns = [];
         $values = [];
 
         foreach($data as $key=>$value)
         {
             array_push($columns, $key);
-            array_push($values, $value);
+            array_push($values, "'$value'");
         }
+
+        $columns = implode(",", $columns);
+        $values = implode(",", $values);
+
+        echo $columns;
+        echo "<br />";
+        echo $values;
 
         $sql = "INSERT INTO ${table}(${columns}) VALUES(${values});";
         $query = $this->query($sql);
