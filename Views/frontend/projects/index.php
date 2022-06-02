@@ -13,7 +13,7 @@
                             <span class="project-id d-block"><?= $value['id'] < 10 ? "0${value['id']}" : $value['id']; ?></span>
                             <span class="project-title d-block fs-2"><?= $value['title'] ?></span>
                         </h2>
-                        <h3 class="project-date heading fst-italic text-secondary mb-0">2018 / 07 / 07</h3>
+                        <h3 class="project-date heading fst-italic text-secondary mb-0"><?= $value['date'] ?></h3>
                         <p class="mb-0">
                             <?= $value['description'] ?>
                         </p>

@@ -1,0 +1,15 @@
+.form-signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-signin form {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.form-signin form > * + * {
+    margin-top: 16px;
+}
