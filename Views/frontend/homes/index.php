@@ -1,25 +1,35 @@
 <!-- Hero Section -->
 <section class="hero py-0">
     <div class="hero-content text-white">
-        <h3 class="hero-heading text-center text-uppercase">arnold davidson</h3>
-        <p class="fs-3 text-capitalize">architect & spatial planner</p>
-    </div>
-    <div class="hero-description mx-auto">
-        <p class="text-center mb-0">“Architecture is the learned game, correct and magnificent, of forms assembled in the light.”</p>
+        <h3 class="hero-heading text-center text-capitalize">let's hire</h3>
+        <p class="fs-3 text-capitalize">We are the Team of Amazing Creative People</p>
     </div>
 </section>
 
-<!-- Work Section -->
-<section class="work bg-secondary bg-opacity-75 text-white">
-    <div class="work-container container">
-        <div class="row align-items-center">
-            <div class="work-content col-md-6">
-                <h3 class="heading text-capitalize">what i do</h3>
-                <p class="mb-0">In my work, I try to find the right balance between form and function. From technical drawings, all the way to the photographic renders, and the actual representations of my work as a designer, my philosophy is that of simplicity. At the same time, my style is distinctly mine – uncluttered, with clean shapes and modern space-saving solutions.</p>
+<!-- Team Section -->
+<section class="team">
+    <div class="team-container container">
+        <h3 class="hero-heading text-center text-capitalize">members of our team</h3>
+        <?php
+        foreach($member as $key => $value) {
+        ?>
+        <div class="member row py-4">
+            <div class="member-info col-md-6">
+                <h6 class="fs-4 fw-semibold text-capitalize mb-3"><?= $value["full_name"] ?></h6>
+                <p class="fs-6"><?= $value["description"] ?></p>
+                <a href="./index.php?controller=about&id=<?= $value["id"] ?>" class="btn btn-info text-white text-capitalize">
+                    about me
+                </a>
+                <a href="./index.php?controller=contact&id=<?= $value["id"] ?>" class="btn btn-primary text-capitalize">
+                    hire me
+                </a>
             </div>
-            <div class="work-img col-md-6">
-                <img class="img-fluid" src="/cvresume/assets/img/work-img.avif" alt="">
+            <div class="member-img col-md-6">
+                <img src="<?= $value["image"] ?>" alt="" />
             </div>
         </div>
+        <?php
+        }
+        ?>
     </div>
 </section>

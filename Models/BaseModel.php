@@ -29,11 +29,46 @@ class BaseModel extends Database {
     }
 
     /**
+	 * Lay ra tat ca ban ghi trong bang co dieu kien
+	 */
+    public function fill($table, $select = ['*'], $data = []) {
+        $condition = [];
+        foreach($data as $key=>$value)
+        {
+            $condition_item = "${key}='${value}'";
+            array_push($condition, $condition_item);
+        }
+
+        $condition = implode(" AND ", $condition);
+
+        $columns = implode(",", $select);
+        $sql = "SELECT ${columns} FROM ${table} WHERE ${condition}";
+        $query = $this->query($sql);
+
+        $data = [];
+
+        while ($row = mysqli_fetch_assoc($query)) {
+			array_push($data, $row);
+		}
+
+		return $data;
+    }
+
+    /**
 	 * Lay ra mot ban ghi trong bang
 	 */
-	public function find($id, $table, $select = ['*'], $key = 'id') {
+	public function find($table, $select = ['*'], $data = []) {
+        $condition = [];
+        foreach($data as $key=>$value)
+        {
+            $condition_item = "${key}='${value}'";
+            array_push($condition, $condition_item);
+        }
+        $condition = implode(" AND ", $condition);
+
         $columns = implode(",", $select);
-        $sql = "SELECT ${columns} FROM ${table} where ${key} = ${id}";
+        $sql = "SELECT ${columns} FROM ${table} where ${condition}";
+        
         $query = $this->query($sql);
 
         $data = mysqli_fetch_assoc($query);
@@ -57,10 +92,6 @@ class BaseModel extends Database {
         $columns = implode(",", $columns);
         $values = implode(",", $values);
 
-        echo $columns;
-        echo "<br />";
-        echo $values;
-
         $sql = "INSERT INTO ${table}(${columns}) VALUES(${values});";
         $query = $this->query($sql);
         $rs = false;
@@ -75,18 +106,18 @@ class BaseModel extends Database {
     /**
 	 * Update du lieu vao bang
 	 */
-	public function update($id, $table, $data) {
+	public function update($id, $table, $data, $key) {
         $columns = [];
         $values = [];
         $update = [];
-        foreach($arr as $key=>$value)
+        foreach($data as $key=>$value)
         {
             $update_item = "${key}='${value}'";
             array_push($update, $update_item);
         }
         $update = implode(",", $update);
 
-        $sql = "UPDATE posts SET ${update} WHERE post_id = '${id}'";
+        $sql = "UPDATE ${table} SET ${update} WHERE ${key} = '${id}'";
         $query = $this->query($sql);
         $rs = false;
 

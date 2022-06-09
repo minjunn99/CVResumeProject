@@ -26,23 +26,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container">
-                <a class="navbar-brand text-uppercase fs-3" href="/cvresume/">arnold</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse py-3" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item text-uppercase">
-                            <a class="nav-link fw-bold" aria-current="page" href="/cvresume/index.php?controller=about">about</a>
-                        </li>
-                        <li class="nav-item text-uppercase">
-                            <a class="nav-link fw-bold" href="/cvresume/index.php?controller=project">projects</a>
-                        </li>
-                        <li class="nav-item text-uppercase">
-                            <a class="nav-link fw-bold" href="/cvresume/index.php?controller=contact">contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <a class="navbar-brand text-uppercase fs-3" href="./">cvresume</a>
             </div>
         </nav>
     </header>

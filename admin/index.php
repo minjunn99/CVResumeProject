@@ -6,7 +6,7 @@ include(dirname(__FILE__)."/includes/header.php");
 
 <main class="form-signin">
   <form class="mx-auto text-center" action="./login.php" method="POST">
-    <a class="text-decoration-none text-uppercase fs-2 fw-semibold text-body" href="/cvresume/admin">arnold</a>
+    <a class="text-decoration-none fs-2 text-uppercase fw-semibold text-body" href="./admin">cvresume</a>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
