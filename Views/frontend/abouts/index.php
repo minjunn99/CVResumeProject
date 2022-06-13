@@ -89,9 +89,15 @@
                         <p class="mb-0">
                             <?= $value['description'] ?>
                         </p>
-                        <a class="btn btn-dark text-capitalize" href="<?= $value['demo'] ?>" target="_blank">
-                            source code
-                        </a>
+                        <?php
+                        if($value['demo']) {
+                        ?>
+                            <a class="btn btn-dark text-capitalize" href="<?= $value['demo'] ?>" target="_blank">
+                                source code
+                            </a>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             <?php
