@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 09, 2022 lúc 04:17 AM
--- Phiên bản máy phục vụ: 10.4.24-MariaDB
--- Phiên bản PHP: 8.1.6
+-- Thời gian đã tạo: Th6 13, 2022 lúc 03:53 PM
+-- Phiên bản máy phục vụ: 10.4.13-MariaDB
+-- Phiên bản PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -57,7 +57,8 @@ CREATE TABLE `education` (
 INSERT INTO `education` (`id`, `name`, `detail`, `date_start`, `date_end`, `id_member`) VALUES
 (1, 'dang tran con a', 'primary school student', 2005, 2010, 2),
 (2, 'vietnam - angieri', 'junior high school student', 2010, 2014, 2),
-(3, 'dao duy tu', 'high school students', 2014, 2017, 2);
+(3, 'dao duy tu', 'high school students', 2014, 2017, 2),
+(4, 'Ta Quang Buu', 'high school', 2014, 2017, 1);
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,8 @@ CREATE TABLE `employment` (
 
 INSERT INTO `employment` (`id`, `undertake`, `detail`, `description`, `date_start`, `date_end`, `id_member`) VALUES
 (1, 'Waiter at An Huy Computer - Cybernet Game Center', '46 Ng. 41 Dong Tac Street, Kim Lien, Dong Da, Hanoi, Vietnam', 'During my time here, I have learned a lot from communicating with customers, serving their needs, and giving them the best service possible. Besides, I learned perseverance and patience.', 2018, 2019, 2),
-(2, 'Php intern at Smartbooks Software Company', '5th Floor - Song Da Building 9, Nguyen Hoang Street, My Dinh 2 Ward, Nam Tu Liem District, Hanoi City.', 'I have participated and contributed a small part to the accounting software project Public investment project SmartBooks Project Finance 2020. Although the internship period was short, it left me with valuable work experience.', 2020, 2021, 2);
+(2, 'Php intern at Smartbooks Software Company', '5th Floor - Song Da Building 9, Nguyen Hoang Street, My Dinh 2 Ward, Nam Tu Liem District, Hanoi City.', 'I have participated and contributed a small part to the accounting software project Public investment project SmartBooks Project Finance 2020. Although the internship period was short, it left me with valuable work experience.', 2020, 2021, 2),
+(3, 'Java Developer at OCG Technology JSC', '7 Floor, Vien Dong Building, 36 Hoang Cau Street, Ha Noi, Viet Nam', 'Maintain current projects. Develop Spring web applications from scratch using Java. Program in Excel using VBA. Deploy projects.', 2019, 2020, 1);
 
 -- --------------------------------------------------------
 
@@ -103,8 +105,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id`, `username`, `password`, `full_name`, `description`, `image`) VALUES
-(1, 'anhnt', 'anhnt@123', 'nguyen tien anh', 'In my work, I try to consult, quote and provide prices of related products and services to customers. Outline product design according to customer requirements. Develop and research products according to complex design briefs. Modify the design according to customer requirements. Prepare product images for design materials. Create advertising videos, propaganda videos, ... according to customer needs.', 'https://www.facebook.com/photo/?fbid=350370363860456&set=a.101641995399962'),
-(2, 'trunghh', 'trunghh@123', 'hoang hieu trung', 'At work, I am responsible for the look and feel of a website. In addition, they are also the designers of the user experience. To do those jobs, Frontend Developer needs to know 3 main programming languages. Those are: HTML, CSS, and JavaScript. Moreover, I am a Frontend developer, so I also have to use my own thinking about UI/UX. At the same time, they need to work closely with designers or BAs (Business Analyst). Thereby, they can analyze and improve the user experience on applications and software.', 'https://www.facebook.com/photo.php?fbid=398102337032527&set=pb.100004982919902.-2207520000..&type=3');
+(1, 'anhtt', 'anhtt@123', 'tran tien anh', 'In my work, I try to consult, quote and provide prices of related products and services to customers. Outline product design according to customer requirements. Develop and research products according to complex design briefs. Modify the design according to customer requirements. Prepare product images for design materials. Create advertising videos, propaganda videos, ... according to customer needs.', './assets/img/member-01.jpg'),
+(2, 'trunghh', 'trunghh@123', 'hoang hieu trung', 'At work, I am responsible for the look and feel of a website. In addition, they are also the designers of the user experience. To do those jobs, Frontend Developer needs to know 3 main programming languages. Those are: HTML, CSS, and JavaScript. Moreover, I am a Frontend developer, so I also have to use my own thinking about UI/UX. At the same time, they need to work closely with designers or BAs (Business Analyst). Thereby, they can analyze and improve the user experience on applications and software.', './assets/img/member-02.jpg');
 
 -- --------------------------------------------------------
 
@@ -127,7 +129,9 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`id`, `title`, `description`, `date`, `image`, `demo`, `id_member`) VALUES
-(1, 'E-Commerce Cart Project with HTML, CSS, JS', 'In this project, there are functions such as when clicking add product and cart, updating the product added to the cart and saving data in localstorage, managing the cart such as adding new products to the cart, deleting products in cart and update the quantity of each product in the cart. The knowledge I have gained in this project is how to store and get data from localstorage and do things when events in the DOM occur.', '2022-05-27', './assets/img/project/ecommerce- cart.png', 'https://minjunn99.github.io/E-Commerce/', 2);
+(1, 'E-Commerce Cart Project with HTML, CSS, JS', 'In this project, there are functions such as when clicking add product and cart, updating the product added to the cart and saving data in localstorage, managing the cart such as adding new products to the cart, deleting products in cart and update the quantity of each product in the cart. The knowledge I have gained in this project is how to store and get data from localstorage and do things when events in the DOM occur.', '2022-05-27', './assets/img/project/ecommerce-cart.jpeg', 'https://github.com/minjunn99/E-Commerce', 2),
+(2, 'Build calculator project', 'Build calculator project with ReactJS. Learn build reactjs project with function', '2022-05-26', './assets/img/project/calculator.jpg', 'https://github.com/minjunn99/calculator/', 2),
+(4, 'Mobile order', 'Is a web responsive application for ordering food. Customers can login, order food and pay money. Sellers \r\ncan login and see the order details.', '2020-06-09', './assets/img/project/mobile-order.webp', '', 1);
 
 -- --------------------------------------------------------
 
@@ -212,13 +216,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT cho bảng `education`
 --
 ALTER TABLE `education`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `employment`
 --
 ALTER TABLE `employment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `member`
@@ -230,7 +234,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT cho bảng `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `testimonial`
