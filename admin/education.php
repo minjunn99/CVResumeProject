@@ -1,1 +1,9 @@
-<h1>Education admin page</h1>
+<?php
+session_start();
+
+echo "<pre>";
+print_r($_SESSION['user']);
+echo "</pre>";
+?>
+
+<a href="./signout.php">Sign out</a>
