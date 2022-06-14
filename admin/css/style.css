@@ -17,3 +17,12 @@
 .nav-link {
     color: #212529;
 }
+
+.nav-link.active {
+    background-color: rgb(108,117,125)!important;
+}
+
+.dashboard {
+    height: 100vh;
+    overflow-y: scroll;
+}
