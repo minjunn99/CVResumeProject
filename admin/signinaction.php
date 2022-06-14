@@ -15,7 +15,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"])) {
 
     $data = mysqli_fetch_assoc($query);
 
-    if(count($data) != 0) {
+    if($data) {
         $_SESSION['user'] = $data;
         header("location: dashboard.php");
     } else {
