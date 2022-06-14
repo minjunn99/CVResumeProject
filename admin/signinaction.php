@@ -17,7 +17,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"])) {
 
     if(count($data) != 0) {
         $_SESSION['user'] = $data;
-        header("location: education.php");
+        header("location: dashboard.php");
     } else {
         header("location: index.php");
     }

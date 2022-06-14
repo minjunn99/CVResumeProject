@@ -11,7 +11,7 @@ include(dirname(__FILE__)."/includes/header.php");
     if(empty($_SESSION['user'])) {
       include("./signin.php");
     } else {
-      include("./education.php");
+      include("./dashboard.php");
     }
   ?>
 </main>
