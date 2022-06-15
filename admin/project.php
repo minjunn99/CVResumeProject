@@ -4,6 +4,10 @@ $data = getProjectInfo($_SESSION['user']['id']);
 ?>
 <div class="flex-grow-1 dashboard">
     <div class="p-5">
+        <h5>
+            Project Manage
+        </h5>
+        <a href="./add_project.php" class="btn btn-secondary my-2" >Add a new project</a>
         <table class="table">
             <thead class="bg-secondary text-white">
                 <tr>
@@ -29,8 +33,8 @@ $data = getProjectInfo($_SESSION['user']['id']);
                     <td><?= $item['image'] ?></td>
                     <td><?= $item['demo'] ?></td>
                     <td>
-                        <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash"></i>
+                        <a href="./edit_project.php?id=<?= $item['id'] ?>"><i class="bi bi-pencil-square"></i></a>
+                        <a href="./delete_project.php?id=<?= $item['id'] ?>"><i class="bi bi-trash"></i></a>
                     </td>
                 </tr>
                 <?php

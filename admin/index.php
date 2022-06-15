@@ -3,7 +3,6 @@ session_start();
 $_SESSION['user'] = [];
 
 include(dirname(__FILE__)."/includes/header.php");
-
 ?>
 
 <?php

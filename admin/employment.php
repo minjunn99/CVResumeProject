@@ -4,6 +4,10 @@ $data = getEmploymentInfo($_SESSION['user']['id']);
 ?>
 <div class="flex-grow-1 dashboard">
     <div class="p-5">
+        <h5>
+            Employment Manage
+        </h5>
+        <a href="./add_employment.php" class="btn btn-secondary my-2" >Add a new employment</a>
         <table class="table">
             <thead class="bg-secondary text-white">
                 <tr>
@@ -29,8 +33,8 @@ $data = getEmploymentInfo($_SESSION['user']['id']);
                     <td><?= $item['date_start'] ?></td>
                     <td><?= $item['date_end'] ?></td>
                     <td>
-                        <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash"></i>
+                        <a href="./edit_employment.php?id=<?= $item['id'] ?>"><i class="bi bi-pencil-square"></i></a>
+                        <a href="./delete_employment.php?id=<?= $item['id'] ?>"><i class="bi bi-trash"></i></a>
                     </td>
                 </tr>
                 <?php

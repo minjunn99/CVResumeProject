@@ -4,6 +4,10 @@ $data = getEducationInfo($_SESSION['user']['id']);
 ?>
 <div class="flex-grow-1 dashboard">
     <div class="p-5">
+        <h5>
+            Education Manage
+        </h5>
+        <a href="./add_education.php" class="btn btn-secondary my-2" >Add a new education</a>
         <table class="table">
             <thead class="bg-secondary text-white">
                 <tr>
@@ -27,8 +31,8 @@ $data = getEducationInfo($_SESSION['user']['id']);
                     <td><?= $item['date_start'] ?></td>
                     <td><?= $item['date_end'] ?></td>
                     <td>
-                        <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash"></i>
+                        <a href="./edit_education.php?id=<?= $item['id'] ?>"><i class="bi bi-pencil-square"></i></a>
+                        <a href="./delete_education.php?id=<?= $item['id'] ?>"><i class="bi bi-trash"></i></a>
                     </td>
                 </tr>
                 <?php
