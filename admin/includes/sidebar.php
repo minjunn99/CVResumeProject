@@ -5,7 +5,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="./dashboard.php" class="nav-link <?php if($page=='education' || $page=='profile') echo 'active' ?>" aria-current="page">
+        <a href="./dashboard.php" class="nav-link <?php if($page=='education') echo 'active' ?>" aria-current="page">
           Education
         </a>
       </li>
