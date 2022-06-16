@@ -15,8 +15,8 @@ if(isset($_POST['btnSave'])){
         $description = $_POST['txtDescription'];
         $date_start  = $_POST['txtDateStart'];
         $date_end  = $_POST['txtDateEnd'];
-        if(addEmployment($gid, $undertake, $detail, $description, $date_start, $date_end)){
-            header('location: dashboard.php');
+        if(editEmployment($gid, $undertake, $detail, $description, $date_start, $date_end)){
+            header('location: dashboard.php?page=employment');
         }else{
             echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
         }

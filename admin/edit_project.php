@@ -15,8 +15,8 @@ if(isset($_POST['btnSave'])){
         $date  = $_POST['txtDate'];
         $image  = $_POST['txtImage'];
         $demo  = $_POST['txtDemo'];
-        if(addProject($gid, $title, $description, $date, $image, $demo)){
-            header('location: dashboard.php');
+        if(editProject($gid, $title, $description, $date, $image, $demo)){
+            header('location: dashboard.php?page=project');
         }else{
             echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
         }

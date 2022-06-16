@@ -10,7 +10,7 @@ if(isset($_POST['btnSave'])){
         $date_start  = $_POST['txtDateStart'];
         $date_end  = $_POST['txtDateEnd'];
         if(addEmployment($undertake, $detail, $description, $date_start, $date_end, $_SESSION['user']['id'])){
-            header('location: dashboard.php');
+            header('location: dashboard.php?page=employment');
         }else{
             echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
         }

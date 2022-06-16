@@ -4,6 +4,9 @@ $data = getContactInfo($_SESSION['user']['id']);
 ?>
 <div class="flex-grow-1 dashboard">
     <div class="p-5">
+        <h5>
+            Contact Manage
+        </h5>
         <table class="table">
             <thead class="bg-secondary text-white">
                 <tr>
@@ -11,7 +14,6 @@ $data = getContactInfo($_SESSION['user']['id']);
                     <th scope="col">Full Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Message</th>
-                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,10 +26,6 @@ $data = getContactInfo($_SESSION['user']['id']);
                     <td><?= $item['full_name'] ?></td>
                     <td><?= $item['email'] ?></td>
                     <td><?= $item['message'] ?></td>
-                    <td>
-                        <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash"></i>
-                    </td>
                 </tr>
                 <?php
                     $index++;

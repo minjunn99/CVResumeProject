@@ -7,7 +7,7 @@
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $id = $_GET['id'];
         if(deleteTestimonial($id)){
-            header("location: dashboard.php");
+            header("location: dashboard.php?page=testimonial");
         }else{
             echo 'Co loi';
         }

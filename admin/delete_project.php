@@ -7,7 +7,7 @@
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $id = $_GET['id'];
         if(deleteProject($id)){
-            header("location: dashboard.php");
+            header("location: dashboard.php?page=project");
         }else{
             echo 'Co loi';
         }

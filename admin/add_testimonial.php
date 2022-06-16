@@ -7,7 +7,7 @@ if(isset($_POST['btnSave'])){
         $full_name = $_POST['txtFullName'];
         $comment = $_POST['txtComment'];
         if(addTestimonial($full_name, $comment, $_SESSION['user']['id'])){
-            header('location: dashboard.php');
+            header('location: dashboard.php?page=testimonial');
         }else{
             echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
         }

@@ -10,7 +10,7 @@ if(isset($_POST['btnSave'])){
         $image  = $_POST['txtImage'];
         $demo  = $_POST['txtDemo'];
         if(addProject($title, $description, $date, $image, $demo, $_SESSION['user']['id'])){
-            header('location: dashboard.php');
+            header('location: dashboard.php?page=project');
         }else{
             echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
         }

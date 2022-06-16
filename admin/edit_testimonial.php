@@ -13,7 +13,7 @@ if(isset($_POST['btnSave'])){
         $full_name = $_POST['txtFullName'];
         $comment = $_POST['txtComment'];
         if(editTestimonial($gid, $full_name, $comment)){
-            header('location: dashboard.php');
+            header('location: dashboard.php?page=testimonial');
         }else{
             echo "<h3 class='bg-dark text-white'>Không thành công</h3>";
         }

@@ -129,7 +129,7 @@ function addEmployment($undertake, $detail, $description, $date_start, $date_end
     }
 
     // 2. Thực hiện TRUY VẤN
-    $sql = "INSERT INTO employment (undertake, detail, description, date_start, date_end, id_member) VALUES ('$undertake', '$detail', '$description' '$date_start','$date_end', '$id_member')";
+    $sql = "INSERT INTO employment(undertake, detail, description, date_start, date_end, id_member) VALUES ('$undertake', '$detail', '$description', '$date_start', '$date_end', '$id_member')";
     if(mysqli_query($conn, $sql)){
         //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
         return true;
