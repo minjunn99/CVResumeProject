@@ -1,4 +1,44 @@
 <?php
+
+function editMember($id, $fullname, $description, $image){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "cvresume");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "UPDATE member SET full_name = '$fullname',  description = '$description', image = '$image' WHERE id = '$id'";
+    if(mysqli_query($conn, $sql)){
+        //Trường hợp thực hiện lệnh khác SELECT > Kết quả trả về TRUE ko?
+        return true;
+    }else{
+        return false;
+    }
+
+    // 3. Dong ket noi
+    mysqli_close($conn);
+}
+
+function getMemberByID($id){
+    // 1. Kết nối tới CSDL
+    $conn = mysqli_connect("localhost","root","", "cvresume");
+    if(!$conn){
+        die("Không thể kết nối tới DB Server");
+    }
+
+    // 2. Thực hiện TRUY VẤN
+    $sql = "SELECT * FROM member WHERE id = '$id'"; //Vì nó là câu lệnh SELECT
+    //mysqli_query trả về 1 tập kết quả
+    $result = mysqli_query($conn, $sql);
+
+    $rows = mysqli_fetch_assoc($result);
+        //Lấy ra từng bản ghi từ TẬP KẾT QUẢ và lưu tạm vào $row
+    // 3. Dong ket noi
+    mysqli_close($conn);
+    return $rows; //Trả về 1 mảng
+}
+
 function getEducationInfo($id){
     // B1. Ket noi CSDL
     $conn = mysqli_connect('localhost','root','','cvresume');
